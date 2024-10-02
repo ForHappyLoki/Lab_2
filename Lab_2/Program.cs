@@ -15,7 +15,7 @@ namespace Lab_2
             builder.SetBasePath(Directory.GetCurrentDirectory());
             builder.AddJsonFile("D:\\Learning\\Курсач АСП\\appsettings.json"); 
             var config = builder.Build();
-            string connectionString = config.GetConnectionString("DefaultConnection");
+            string? connectionString = config.GetConnectionString("DefaultConnection");
 
             var optionsBuilder = new DbContextOptionsBuilder<DatabaseContext>();
             var options = optionsBuilder
